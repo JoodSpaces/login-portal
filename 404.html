@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JOOD — Page not found</title>
+<script>
+// GitHub Pages serves this for any unknown path. Old links (renamed files,
+// bookmarks with spaces) land here — send the proposal ones to the homepage
+// rather than showing a dead end.
+(function () {
+  var p = decodeURIComponent(location.pathname).toLowerCase();
+  var base = location.pathname.split('/').slice(0, 2).join('/') + '/';
+  if (p.indexOf('transformation') > -1 || p.indexOf('room') > -1) {
+    location.replace(base + location.search + location.hash);
+  }
+})();
+</script>
+<style>body{font-family:system-ui,sans-serif;color:#6b625f;background:#faf8f6;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;margin:0;gap:14px}a{color:#351e1c}</style>
+</head>
+<body>
+<p>That page has moved.</p>
+<p><a href="/login-portal/">Go to the proposal →</a></p>
+</body>
+</html>

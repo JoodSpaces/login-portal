@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOOD — Owner Portal · Sign In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --snow:#F5F4ED; --mist:#ECECDC; --kite:#351E1C; --garnet:#733635;
+    --orange:#FF6037; --aqua:#A0C9CB; --mid:#8A6663; --border:rgba(53,30,28,.12);
+    --serif:'Instrument Serif',Georgia,serif; --sans:'Geist',sans-serif; --mono:'Geist Mono',monospace;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    font-family:var(--sans); color:var(--kite); background:var(--kite);
+    background-image:
+      radial-gradient(ellipse 70% 60% at 85% 0%, rgba(255,96,55,.20) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 55% at 10% 100%, rgba(160,201,203,.16) 0%, transparent 60%);
+    padding:32px;
+  }
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--orange)}
+  button{cursor:pointer;border:none;background:none;font-family:inherit}
+
+  .card{
+    width:100%; max-width:920px; background:var(--snow); border-radius:18px;
+    display:grid; grid-template-columns:1fr 1.1fr; overflow:hidden;
+    box-shadow:0 40px 100px -30px rgba(0,0,0,.55);
+  }
+  .side{
+    background:linear-gradient(165deg,#351E1C 0%,#2A1715 55%,#4A1F22 100%);
+    color:var(--snow); padding:44px 40px; display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .side img{height:40px;width:auto;display:block;align-self:flex-start;filter:brightness(0) invert(1);opacity:.92}
+  .side-copy .eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);margin-bottom:14px}
+  .side-copy h1{font-family:var(--serif);font-weight:400;font-size:2.1rem;line-height:1.12;letter-spacing:-.01em;margin-bottom:14px}
+  .side-copy h1 em{font-style:italic;color:var(--orange)}
+  .side-copy p{font-size:.88rem;line-height:1.7;color:#DCCBC4;max-width:320px}
+  .side-foot{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:#A98C84}
+
+  .main{padding:44px 44px 40px; display:flex; flex-direction:column; gap:26px}
+  .main-head h2{font-family:var(--serif);font-size:1.7rem;font-weight:400;margin-bottom:6px}
+  .main-head p{font-size:.86rem;color:var(--mid)}
+
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid)}
+  .field input{
+    padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--sans);
+    font-size:.9rem;color:var(--kite);background:#fff;
+  }
+  .field input:focus{outline:none;border-color:var(--orange)}
+  .manual{display:flex;flex-direction:column;gap:14px}
+  .btn-primary{
+    background:var(--kite);color:var(--snow);padding:13px 22px;border-radius:40px;
+    font-size:.85rem;font-weight:500;transition:background .2s;text-align:center;
+  }
+  .btn-primary:hover{background:var(--orange)}
+  .btn-primary:disabled{opacity:.55;pointer-events:none}
+
+  .error-msg{
+    font-size:.8rem;color:var(--garnet);background:rgba(115,54,53,.08);border:1px solid rgba(115,54,53,.2);
+    padding:10px 14px;border-radius:8px;display:none;
+  }
+  .error-msg.show{display:block}
+
+  .foot-note{font-size:.78rem;color:var(--mid);line-height:1.6}
+
+  @media (max-width:760px){
+    .card{grid-template-columns:1fr}
+    .side{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="side">
+    <img src="../images/jood-logo-dark.png" alt="JOOD">
+    <div class="side-copy">
+      <div class="eyebrow">Owner Portal</div>
+      <h1>Your unit,<br><em>always in view.</em></h1>
+      <p>Transformation proposals, design tools, contracts and updates from JOOD — in one place, for every owner.</p>
+    </div>
+    <div class="side-foot">JOOD Spaces · Owner Access</div>
+  </div>
+
+  <div class="main">
+    <div class="main-head" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px">
+      <div>
+        <h2>Sign in</h2>
+        <p>Access your unit's transformation, documents and updates.</p>
+      </div>
+      <span data-lang-slot></span>
+    </div>
+
+    <div class="error-msg" id="errorMsg"></div>
+
+    <form class="manual" id="loginForm">
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="owner@email.com" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="pw">Password</label>
+        <input id="pw" type="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn-primary" id="signInBtn">Sign in</button>
+    </form>
+
+    <div class="foot-note">Don't have access yet? Contact your JOOD project lead to have your owner account set up.</div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="supabase-client.js"></script>
+<script>
+  const form = document.getElementById('loginForm');
+  const errorMsg = document.getElementById('errorMsg');
+  const btn = document.getElementById('signInBtn');
+
+  // If already signed in, skip straight to dashboard.
+  sb.auth.getSession().then(({ data }) => {
+    if (data.session) window.location.href = 'dashboard.html';
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorMsg.classList.remove('show');
+    btn.disabled = true; btn.textContent = 'Signing in…';
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('pw').value;
+
+    const { error } = await sb.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      errorMsg.textContent = error.message === 'Invalid login credentials'
+        ? 'Incorrect email or password.'
+        : error.message;
+      errorMsg.classList.add('show');
+      btn.disabled = false; btn.textContent = 'Sign in';
+      return;
+    }
+    window.location.href = 'dashboard.html';
+  });
+</script>
+
+<script src="../i18n/ar-login.js"></script>
+<script src="../i18n/jood-i18n.js"></script>
+
+</body>
+</html>

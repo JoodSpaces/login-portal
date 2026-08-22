@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOOD — Landlord Partnership Proposal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="styles.css">
+
+<template id="__bundler_thumbnail" data-bg-color="#F1ECE1">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F1ECE1"/>
+    <g transform="translate(360,240)">
+      <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="280" font-style="italic" fill="#16140F" font-weight="400">JOOD</text>
+      <circle cx="500" cy="-40" r="22" fill="#C2542B"/>
+      <text x="0" y="120" font-family="ui-monospace, monospace" font-size="22" letter-spacing="6" fill="#847864">LANDLORD · PROPOSAL · 2026</text>
+    </g>
+  </svg>
+</template>
+<style id="ar-patch">html[data-lang=ar] h1.hero-title{font-size:clamp(40px,7vw,86px);line-height:1.35;letter-spacing:0}html[data-lang=ar] h1.hero-title em::after{display:none}html[data-lang=ar] .title,html[data-lang=ar] h2.title{line-height:1.45}html[data-lang=ar] .eyebrow,html[data-lang=ar] .nav-links a{letter-spacing:0}[dir=rtl] h1.hero-title em::after{transform-origin:right}[dir=rtl] .nav-cta svg,[dir=rtl] .btn svg{transform:scaleX(-1)}nav.top{gap:16px}nav.top>.nav-links{flex:1 1 auto;justify-content:center;min-width:0;flex-wrap:nowrap}nav.top>.nav-logo,nav.top>div:last-child{flex:0 0 auto}@media(max-width:1180px){nav.top>.nav-links{gap:18px}.nav-back{font-size:10px}}@media(max-width:1040px){nav.top>.nav-links{display:none}}.nav-logo img{height:26px;width:auto;display:block}.f-logo img{height:24px;width:auto;display:block}
+.nav-back{font-family:var(--mono,ui-monospace,monospace);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:inherit;opacity:.6;white-space:nowrap;transition:opacity .2s}
+.nav-back:hover{opacity:1}
+[dir=rtl] .nav-back{transform:scaleX(1)}
+@media(max-width:900px){.nav-back{display:none}}
+.f-back{font-family:var(--mono,ui-monospace,monospace);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:inherit;opacity:.6}
+.f-back:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav class="top">
+  <a href="#top" class="nav-logo"><img src="../images/jood-logo-dark.png" alt="JOOD"></a>
+  <div class="nav-links">
+    <a href="#why">Why</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#staging">Staging</a>
+    <a href="#models">Partnership</a>
+    <a href="#process">Process</a>
+    <a href="#booking">Demo</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <a href="../Coming Soon.html" class="nav-back">← joodspaces.com</a>
+    <span data-lang-slot></span>
+    <a href="#contact" class="nav-cta">Get a free assessment</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-head">
+      <div class="h-meta">
+        <span>Landlord Partnership Proposal</span>
+        <span><strong>Cairo · 2026</strong> · Prepared for owners of 1–10 units</span>
+      </div>
+      <div class="h-meta" style="text-align: right">
+        <span>Document № <strong>JD-2026-04</strong></span>
+        <span>Read time · <strong>~6 minutes</strong></span>
+      </div>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line"><span class="word">Your</span> <span class="word">property,</span></span>
+      <span class="line"><span class="word"><em>turned</em></span> <span class="word"><em>asset.</em></span></span>
+    </h1>
+
+    <div class="hero-foot">
+      <p class="hero-sub">
+        JOOD is a hospitality operations company. We take Cairo apartments — yours and forty-nine others —
+        and run them like boutique hotels. <strong>Design, photography, pricing, guests, housekeeping, and a monthly report on the fifth.</strong>
+        Your involvement: zero. Your upside: measurable.
+      </p>
+      <div class="hero-cta-block">
+        <a href="#contact" class="btn btn-primary">
+          Book a free property assessment
+          <svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5h16M12 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#portfolio" class="btn btn-ghost">Explore the portfolio</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num"><span data-count="50" data-suffix="+">0</span></div>
+        <div class="lbl">Active Units</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num"><span data-count="15">0</span></div>
+        <div class="lbl">Properties Operated</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num"><span data-count="4.8" data-dec="1">0</span></div>
+        <div class="lbl">Avg. Guest Rating</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num"><span data-count="87" data-suffix="%">0</span></div>
+        <div class="lbl">Avg. Occupancy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- marquee -->
+<div class="hero-marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>New Cairo</span><span class="dot">●</span>
+    <span>Maadi</span><span class="dot">●</span>
+    <span>Downtown</span><span class="dot">●</span>
+    <span>Sheikh Zayed</span><span class="dot">●</span>
+    <span>Marassi</span><span class="dot">●</span>
+    <span>Almaza Bay</span><span class="dot">●</span>
+    <span>Hacienda Bay</span><span class="dot">●</span>
+    <span>Katameya Dunes</span><span class="dot">●</span>
+    <span>Garden City</span><span class="dot">●</span>
+    <span>New Cairo</span><span class="dot">●</span>
+    <span>Maadi</span><span class="dot">●</span>
+    <span>Downtown</span><span class="dot">●</span>
+    <span>Sheikh Zayed</span><span class="dot">●</span>
+    <span>Marassi</span><span class="dot">●</span>
+    <span>Almaza Bay</span><span class="dot">●</span>
+    <span>Hacienda Bay</span><span class="dot">●</span>
+    <span>Katameya Dunes</span><span class="dot">●</span>
+    <span>Garden City</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     01 — WHY JOOD
+     ============================================================ -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">00 — Foundation</div>
+      <h2 class="title">Why <em>JOOD</em> exists.</h2>
+      <p class="lede">Cairo's rental market has a quiet problem. Properties sit underperforming — not because demand is weak, but because most landlords don't have the time, the tools, or the hospitality discipline to extract the full value of what they own. We close that gap.</p>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-story reveal">
+        <p>
+          The name JOOD comes from the Arabic <strong>جود</strong> — generosity, excellence in the act of giving.
+          It defines how we treat guests and, by extension, how we structure partnerships with the people who trust us with their property.
+        </p>
+        <p>
+          We are not a listing service. We are a <strong>hospitality operations company</strong> that treats every unit as a guest-facing product —
+          designed, photographed, priced dynamically, and managed with the same care you'd expect from a boutique hotel.
+        </p>
+        <p>
+          Our work is invisible to you, and absolute to your guest. When your unit performs, <span class="kw">we perform</span>.
+          When it doesn't, you have a single number to call. His name is Hussam Hassan, and he answers on a Friday evening.
+        </p>
+      </div>
+
+      <div class="compare-table reveal">
+        <div class="cmp-row head"><div>Metric</div><div>Cairo market avg.</div><div>JOOD-managed units</div></div>
+        <div class="cmp-row">
+          <div class="metric">Occupancy</div>
+          <div class="market">48 — 55%</div>
+          <div class="jood numeric">75 — 91% <span class="gain">+30%</span></div>
+        </div>
+        <div class="cmp-row">
+          <div class="metric">Daily rate</div>
+          <div class="market">800–7,000 <small>EGP</small></div>
+          <div class="jood numeric">6,200–31,200 <span class="gain">+2×</span></div>
+        </div>
+        <div class="cmp-row">
+          <div class="metric">Review score</div>
+          <div class="market">4.1 — 4.4</div>
+          <div class="jood numeric">4.8 — 5.0 <span class="gain">Top 5%</span></div>
+        </div>
+        <div class="cmp-row">
+          <div class="metric">Landlord effort</div>
+          <div class="market">High</div>
+          <div class="jood">None</div>
+        </div>
+        <div class="cmp-row">
+          <div class="metric">Monthly reporting</div>
+          <div class="market">— none —</div>
+          <div class="jood">Full audit</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     02 — PORTFOLIO MAP
+     ============================================================ -->
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">01 — Active Portfolio</div>
+      <h2 class="title">Fifty units. <em>Fifteen addresses.</em><br>One operating standard.</h2>
+      <p class="lede">Click any pin. Filter the list. Every property below is operated by JOOD today — across Greater Cairo and the North Coast. <span id="filterCount" class="numeric">15</span> shown.</p>
+    </div>
+
+    <div class="portfolio-shell reveal">
+      <div id="joodMap"></div>
+      <aside class="portfolio-side">
+        <div class="filter-bar">
+          <div>
+            <div class="filter-label">Region</div>
+            <div class="filter-row" style="margin-top:8px">
+              <button class="chip active" data-fk="region" data-fv="all">All</button>
+              <button class="chip terra" data-fk="region" data-fv="cairo">Greater Cairo</button>
+              <button class="chip" data-fk="region" data-fv="coast">North Coast</button>
+            </div>
+          </div>
+          <div>
+            <div class="filter-label">Nightly rate band</div>
+            <div class="filter-row" style="margin-top:8px">
+              <button class="chip active" data-fk="rate" data-fv="all">Any</button>
+              <button class="chip" data-fk="rate" data-fv="lt200">Under $200</button>
+              <button class="chip" data-fk="rate" data-fv="200to500">$200–500</button>
+              <button class="chip" data-fk="rate" data-fv="500plus">$500+</button>
+            </div>
+          </div>
+        </div>
+        <div class="unit-list" id="unitList"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     03 — UNIT CARDS (3D tilt parallax)
+     ============================================================ -->
+<section id="units" class="dense">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">02 — Featured Units</div>
+      <h2 class="title">Three properties.<br><em>Three different stories.</em></h2>
+      <p class="lede">A snapshot of how the same operating standard adapts to very different buildings, neighborhoods, and price points. Hover to see them lift off the page.</p>
+    </div>
+
+    <div class="unit-cards-grid">
+
+      <!-- card 1 -->
+      <div class="unit-card reveal">
+        <div class="card-img">
+          <img src="img/katameya-dunes.jpg" alt="Katameya Dunes" class="card-photo">
+          <div class="badge terra">★ 4.96</div>
+        </div>
+        <h3>Katameya Dunes</h3>
+        <div class="card-meta">New Cairo · 3 BR · golf views · Premium</div>
+        <div class="card-stats">
+          <div class="c-stat"><div class="v">$420</div><div class="k">Avg. nightly</div></div>
+          <div class="c-stat"><div class="v">91%</div><div class="k">Occupancy</div></div>
+          <div class="c-stat"><div class="v">38</div><div class="k">Reviews</div></div>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="unit-card reveal">
+        <div class="card-img">
+          <img src="img/mivida-emaar.jpg" alt="Mivida-Emaar" class="card-photo">
+          <div class="badge">Super Host</div>
+        </div>
+        <h3>Mivida-Emaar</h3>
+        <div class="card-meta">North Coast · 3 BR · Premium</div>
+        <div class="card-stats">
+          <div class="c-stat"><div class="v">$250</div><div class="k">Peak nightly</div></div>
+          <div class="c-stat"><div class="v">88%</div><div class="k">Summer occ.</div></div>
+          <div class="c-stat"><div class="v">109</div><div class="k">Reviews</div></div>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="unit-card reveal">
+        <div class="card-img">
+          <img src="img/downtown.jpg" alt="Downtown" class="card-photo">
+          <div class="badge terra">★ 5.00</div>
+        </div>
+        <h3>Downtown</h3>
+        <div class="card-meta">Downtown Cairo · 4 BR · heritage · short-stay</div>
+        <div class="card-stats">
+          <div class="c-stat"><div class="v">$140</div><div class="k">Avg. nightly</div></div>
+          <div class="c-stat"><div class="v">86%</div><div class="k">Occupancy</div></div>
+          <div class="c-stat"><div class="v">61</div><div class="k">Reviews</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     04 — BEFORE / AFTER STAGING
+     ============================================================ -->
+<section id="staging">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">03 — Design & Staging</div>
+      <h2 class="title">The same unit.<br><em>Two different rates.</em></h2>
+      <p class="lede">Drag the line. The left half is a standard furnished Cairo apartment listing. The right is what we do with it: design plan, FF&amp;E, styling, photography. Same square meters. Different revenue.</p>
+    </div>
+
+    <div class="ba-shell reveal">
+      <div class="ba-img before">
+        <img src="img/staging-before.jpg" alt="Before" class="ba-photo">
+        <div class="lbl">Before · Long-term let</div>
+      </div>
+      <div class="ba-img after">
+        <img src="img/staging-after.jpg" alt="After" class="ba-photo">
+        <div class="lbl">After · JOOD design</div>
+      </div>
+      <div class="ba-handle"></div>
+      <div class="ba-knob">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+
+    <div class="ba-stat-strip reveal">
+      <div class="ba-stat"><div class="v numeric"><span data-count="147" data-prefix="+" data-suffix="%">0</span></div><div class="k">Average rate uplift</div></div>
+      <div class="ba-stat"><div class="v numeric"><span data-count="14" data-suffix=" days">0</span></div><div class="k">Typical setup window</div></div>
+      <div class="ba-stat"><div class="v numeric"><span data-count="0" data-suffix=" EGP">0</span></div><div class="k">Landlord upfront (Model 02 &amp; 03)</div></div>
+      <div class="ba-stat"><div class="v numeric"><span data-count="4.8" data-dec="1" data-suffix="★">0</span></div><div class="k">Average post-stage rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 — PARTNERSHIP MODELS (DARK)
+     ============================================================ -->
+<section id="models" class="ink-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">04 — Partnership Structure</div>
+      <h2 class="title">Three models.<br><em>One principle.</em></h2>
+      <p class="lede">Every landlord situation is different. Our three partnership models meet your property where it is today — not where we wish it was. Tap a tab to compare.</p>
+    </div>
+
+    <div class="models-tabs reveal">
+      <button class="model-tab active" data-k="01">
+        <div class="tab-num">Model 01</div>
+        <div class="tab-name">Furnished Unit</div>
+        <div class="tab-tag">Lightest entry · 25% commission</div>
+        <div class="tab-underline"></div>
+      </button>
+      <button class="model-tab" data-k="02">
+        <div class="tab-num">Model 02</div>
+        <div class="tab-name">Full Partnership</div>
+        <div class="tab-tag">JOOD invests · 60/40 split</div>
+        <div class="tab-underline"></div>
+      </button>
+      <button class="model-tab" data-k="03">
+        <div class="tab-num">Model 03</div>
+        <div class="tab-name">Guaranteed Income</div>
+        <div class="tab-tag">Fixed rent · zero exposure</div>
+        <div class="tab-underline"></div>
+      </button>
+    </div>
+
+    <!-- Panel 01 -->
+    <div class="model-panel reveal" data-k="01">
+      <div class="panel-lead">
+        <h3>You bring the keys.<br><em>We bring everyone else.</em></h3>
+        <p>Your unit is already furnished and presentable. We handle everything else — photography, listing, dynamic pricing, guest communication, housekeeping, and the monthly report. The lightest entry into the JOOD portfolio.</p>
+        <div class="split-pill"><div class="num">25%</div><div class="lbl">JOOD commission<br><span style="opacity:0.6">20% possible in New Cairo</span></div></div>
+      </div>
+      <div class="panel-points">
+        <div class="pt"><div class="pt-k">Landlord investment</div><div class="pt-v">Zero — no upfront capital required</div></div>
+        <div class="pt"><div class="pt-k">Distribution</div><div class="pt-v">Airbnb · Booking.com · JOOD direct</div></div>
+        <div class="pt"><div class="pt-k">Pricing</div><div class="pt-v">Dynamic from Day 1, reviewed weekly</div></div>
+        <div class="pt"><div class="pt-k">Reporting</div><div class="pt-v">Detailed monthly statement + payout</div></div>
+        <div class="pt"><div class="pt-k">Exit clause</div><div class="pt-v">60-day notice · no penalties</div></div>
+        <div class="pt"><div class="pt-k">Best for</div><div class="pt-v">Owners with a ready, well-furnished unit</div></div>
+      </div>
+    </div>
+
+    <!-- Panel 02 -->
+    <div class="model-panel reveal" data-k="02" style="display:none">
+      <div class="panel-lead">
+        <h3>You bring the walls.<br><em>We bring everything else.</em></h3>
+        <p>Unfurnished unit? We design, furnish, photograph and operate it — and we put capital in alongside you. Full partnership means we're equally invested in the outcome, with a written design plan before a single piaster is spent.</p>
+        <div class="split-pill"><div class="num">60/40</div><div class="lbl">Landlord / JOOD split<br><span style="opacity:0.6">+10% design fee on creative</span></div></div>
+      </div>
+      <div class="panel-points">
+        <div class="pt"><div class="pt-k">Landlord investment</div><div class="pt-v">Zero — JOOD finances FF&amp;E and design</div></div>
+        <div class="pt"><div class="pt-k">Design process</div><div class="pt-v">Brief → moodboard → 3D plan → install</div></div>
+        <div class="pt"><div class="pt-k">Contractor network</div><div class="pt-v">Negotiated rates passed through to you</div></div>
+        <div class="pt"><div class="pt-k">Term</div><div class="pt-v">Minimum 4-year partnership</div></div>
+        <div class="pt"><div class="pt-k">Furniture ownership</div><div class="pt-v">JOOD-owned, buyout option at exit</div></div>
+        <div class="pt"><div class="pt-k">Best for</div><div class="pt-v">Owners of empty units or new handovers</div></div>
+      </div>
+    </div>
+
+    <!-- Panel 03 -->
+    <div class="model-panel reveal" data-k="03" style="display:none">
+      <div class="panel-lead">
+        <h3>You bring the property.<br><em>We bring the cheque.</em></h3>
+        <p>You prefer stability over upside. We lease your unit, complete the furnishing and design ourselves, and pay you a fixed monthly rent — regardless of occupancy. JOOD absorbs all vacancy risk. You sleep. We work.</p>
+        <div class="split-pill"><div class="num">Fixed</div><div class="lbl">Monthly rent · agreed upfront<br><span style="opacity:0.6">5-year contract</span></div></div>
+      </div>
+      <div class="panel-points">
+        <div class="pt"><div class="pt-k">Income predictability</div><div class="pt-v">100% — zero market exposure</div></div>
+        <div class="pt"><div class="pt-k">Vacancy risk</div><div class="pt-v">JOOD absorbs entirely</div></div>
+        <div class="pt"><div class="pt-k">FF&amp;E and setup</div><div class="pt-v">Fully on JOOD's balance sheet</div></div>
+        <div class="pt"><div class="pt-k">Term</div><div class="pt-v">5-year master lease, renewable</div></div>
+        <div class="pt"><div class="pt-k">Owner stays</div><div class="pt-v">Not included — trade for predictability</div></div>
+        <div class="pt"><div class="pt-k">Best for</div><div class="pt-v">Long-distance owners, conservative cashflow</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 — SERVICES
+     ============================================================ -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">05 — Operations</div>
+      <h2 class="title">What we actually <em>do</em><br>every single day.</h2>
+      <p class="lede">When you partner with JOOD, you hand off an asset. What we hand back is a performing hospitality product — with full financial transparency and zero landlord workload.</p>
+    </div>
+
+    <div class="svc-grid reveal">
+      <div class="svc-card">
+        <div class="svc-num">Service 01</div>
+        <h3>Financial Management</h3>
+        <p class="svc-pull">"You should always know exactly what your property earned, what it cost, and why."</p>
+        <ul>
+          <li>Monthly revenue & expense report delivered on the 5th</li>
+          <li>Landlord payout on the 10th of every month, by bank transfer</li>
+          <li>Dynamic pricing review and rate adjustment, weekly</li>
+          <li>Quarterly revenue-optimisation strategy session</li>
+          <li>Expense tracking and pre-approval for anything above 500 EGP</li>
+          <li>Annual performance summary with year-on-year comparison</li>
+        </ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-num">Service 02</div>
+        <h3>Guest Experience</h3>
+        <p class="svc-pull">"Guest experience is not a soft metric. It is the engine of your occupancy rate."</p>
+        <ul>
+          <li>Personal check-in with unit orientation and welcome note</li>
+          <li>Curated amenity pack per stay type — leisure, business, family</li>
+          <li>Local recommendations guide, refreshed seasonally</li>
+          <li>24/7 guest support — Hussam Hassan personally reachable</li>
+          <li>Review management with response within 24 hours of checkout</li>
+          <li>Concierge for transport, restaurants, and emergencies</li>
+        </ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-num">Service 03</div>
+        <h3>Marketing & Distribution</h3>
+        <p class="svc-pull">"Your unit competes against hundreds of listings. Photography and pricing are not optional."</p>
+        <ul>
+          <li>Professional photography session — styled, lit, retouched</li>
+          <li>Listing copywriting in English and Arabic</li>
+          <li>Multi-platform distribution: Airbnb, Booking.com, direct</li>
+          <li>Seasonal calendars and event-based rate surges</li>
+          <li>Monthly competitor benchmarking</li>
+          <li>Algorithm optimisation: response, acceptance, ranking</li>
+        </ul>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-num">Service 04</div>
+        <h3>Operations & Maintenance</h3>
+        <p class="svc-pull">"A unit that looks like it's being looked after gets reviewed like it is. The standard is visible."</p>
+        <ul>
+          <li>Hotel-standard housekeeping after every checkout</li>
+          <li>Pre-arrival quality inspection on every booking</li>
+          <li>Linen, towel and amenity restocking handled by JOOD</li>
+          <li>Property sealing and security check between stays</li>
+          <li>Quarterly preventive-maintenance schedule</li>
+          <li>Emergency repair coordination via our contractor network</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     07 — PROCESS TIMELINE (animated)
+     ============================================================ -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">06 — How we start</div>
+      <h2 class="title">From assessment<br>to <em>first guest.</em></h2>
+      <p class="lede">Every JOOD unit follows the same onboarding sequence. Two to four weeks, then we operate and you watch the numbers. Scroll the timeline.</p>
+    </div>
+
+    <div class="timeline-shell reveal">
+      <div class="timeline-track"><div class="progress"></div></div>
+
+      <div class="tl-row">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-when">Day 0 — Free, no commitment</div>
+          <h3>Property assessment</h3>
+          <p>We visit your unit and score it across 40+ criteria: condition, design potential, location demand, projected performance. You receive a written assessment and a recommended partnership model.</p>
+        </div>
+        <div class="tl-detail">
+          <span class="li">— On-site walkthrough</span>
+          <span class="li">— 40-point scoring rubric</span>
+          <span class="li">— Honest revenue projection</span>
+          <span class="li">— Model recommendation</span>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-when">Week 1 — Agreement</div>
+          <h3>Partnership signed</h3>
+          <p>Contract written in plain language with the exit clause on page one. We agree the partnership model, the split, the term, and the operating standard before any photography begins.</p>
+        </div>
+        <div class="tl-detail">
+          <span class="li">— Model 01, 02 or 03 chosen</span>
+          <span class="li">— Plain-language contract</span>
+          <span class="li">— Exit clause on page one</span>
+          <span class="li">— Operating standard agreed</span>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-when">Weeks 1–4 — Design & set-up</div>
+          <h3>Design and staging</h3>
+          <p>Under Models 02 and 03, this is where we put capital to work. Brief → moodboard → procurement → install. Under Model 01, the unit is photographed, styled and listed against an optimised rate calendar.</p>
+        </div>
+        <div class="tl-detail">
+          <span class="li">— Moodboard + 3D plan</span>
+          <span class="li">— FF&amp;E sourced and installed</span>
+          <span class="li">— Styled photography session</span>
+          <span class="li">— Smart lock + welcome kit</span>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-when">Weeks 4–5 — Launch</div>
+          <h3>Market launch</h3>
+          <p>Airbnb and Booking.com listings go live with rate parity. Dynamic pricing engine activates. JOOD direct channel opens. First booking typically lands inside 7 days of launch.</p>
+        </div>
+        <div class="tl-detail">
+          <span class="li">— Listings live, optimised</span>
+          <span class="li">— Dynamic pricing on</span>
+          <span class="li">— 90-day rate calendar built</span>
+          <span class="li">— First guest confirmed</span>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-when">Ongoing — Operations</div>
+          <h3>You read the report.<br>We run the building.</h3>
+          <p>Housekeeping after every guest, pre-arrival inspection, 24/7 guest support, weekly rate review. Monthly report on the 5th, payout on the 10th, quarterly performance review with you in the room.</p>
+        </div>
+        <div class="tl-detail">
+          <span class="li">— Report · every 5th</span>
+          <span class="li">— Payout · every 10th</span>
+          <span class="li">— Direct contact · Hussam Hassan</span>
+          <span class="li">— Quarterly partnership review</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     08 — BOOKING DEMO
+     ============================================================ -->
+<section id="booking">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">07 — What a guest sees</div>
+      <h2 class="title">Try a guest booking.<br><em>Watch your ledger update.</em></h2>
+      <p class="lede">This is a working approximation of the experience a guest has on Airbnb or our direct channel. Change the dates, add a guest, hit Reserve — and watch what flows back to you, the landlord.</p>
+    </div>
+
+    <div class="booking-shell reveal">
+      <!-- LEFT: listing preview -->
+      <div class="booking-listing">
+        <div class="listing-hero">
+          <div class="super">Super Host</div>
+          <div class="ph-tag">Photography placeholder · listing hero</div>
+        </div>
+        <div class="listing-meta-top">
+          <div>
+            <h3>Sunlit 2BR · New Cairo</h3>
+            <div class="listing-meta-bottom" style="margin-top:6px">
+              <span>4 guests</span><span>·</span><span>2 bedrooms</span><span>·</span><span>2 baths</span>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><b>4.96</b><span style="color:var(--ink-mute);font-weight:400">(38)</span>
+          </div>
+        </div>
+        <div class="amenity-row">
+          <div class="am">Self check-in</div>
+          <div class="am">Wifi · 200 mbps</div>
+          <div class="am">Workspace</div>
+          <div class="am">Air-conditioning</div>
+          <div class="am">Free parking</div>
+          <div class="am">Pool access</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: booking form -->
+      <div class="booking-form">
+        <div class="form-head">
+          <div class="rate" id="rateLine">$220<span class="per">/ night</span></div>
+          <div class="live">Dynamic pricing live</div>
+        </div>
+
+        <div class="date-grid">
+          <div class="date-cell">
+            <div class="dlbl">Check-in</div>
+            <div class="dval" id="checkinDate">—</div>
+          </div>
+          <div class="date-cell">
+            <div class="dlbl">Check-out</div>
+            <div class="dval" id="checkoutDate">—</div>
+          </div>
+        </div>
+        <div class="guest-row">
+          <div>
+            <div class="dlbl">Guests</div>
+            <div style="font-family:var(--serif);font-size:20px;margin-top:2px"><span id="guestCount">2</span> adults</div>
+          </div>
+          <div class="stepper">
+            <button id="gMinus" aria-label="Decrease guests">−</button>
+            <div class="gn"></div>
+            <button id="gPlus" aria-label="Increase guests">+</button>
+          </div>
+        </div>
+
+        <div class="fee-list">
+          <div class="frow"><span id="feeNights" class="calc">$220 × 4 nights</span><span id="feeSubtotal" class="numeric">$880</span></div>
+          <div class="frow"><span class="calc">Cleaning fee</span><span id="feeCleaning" class="numeric">$65</span></div>
+          <div class="frow"><span class="calc">Service fee</span><span id="feeService" class="numeric">$123</span></div>
+          <div class="frow total" id="feeTotal"><span>Total · USD</span><span class="num numeric">$1,068</span></div>
+        </div>
+
+        <div class="book-btn" id="bookBtn">Reserve</div>
+        <div class="confirm-note">You won't be charged yet — this is a demo. ✶</div>
+
+        <!-- landlord-side ledger update -->
+        <div class="landlord-ledger" id="landlordLedger">
+          <div class="ll-head">Your landlord ledger — live</div>
+          <div class="ll-rows">
+            <div class="ll-row"><span>Gross revenue from this stay</span><span class="numeric" id="ledGross">$945</span></div>
+            <div class="ll-row"><span>JOOD commission (Model 01 · 25%)</span><span class="numeric" id="ledFee">− $236</span></div>
+            <div class="ll-row payout"><span>Net to landlord · paid on the 10th</span><span class="numeric" id="ledNet">$709</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     09 — MONTHLY REPORT (the artifact the landlord receives)
+     ============================================================ -->
+<section id="report">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">08 — What you see every month</div>
+      <h2 class="title">Day 31.<br><em>Every month.</em></h2>
+      <p class="lede">No spreadsheets to chase. No phone calls. The first of every month, a complete owner statement lands in your inbox — revenue, occupancy, every booking, every fee, the maintenance log, and next month's pricing strategy. Below is a real April 2026 statement, redacted.</p>
+    </div>
+
+    <!-- Download action -->
+    <div class="rpt-actions reveal">
+      <button type="button" class="rpt-download" id="rptDownload" onclick="window.print()">
+        <svg class="dl-ico" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M7 1v8.5M3.5 6L7 9.5 10.5 6M1.5 12.5h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Download sample as PDF
+      </button>
+      <span class="rpt-actions-note">Opens your print dialog · choose Save as PDF</span>
+    </div>
+
+    <!-- The "document" -->
+    <article class="report-doc reveal" aria-label="Sample owner statement">
+      <!-- letterhead -->
+      <header class="rpt-head">
+        <div class="rpt-brand">
+          <div class="rpt-logo">JOOD<span class="dot">.</span></div>
+          <div class="rpt-meta">
+            <div class="rpt-meta-row"><span class="k">Statement</span><span class="v">№ 2026-04-018</span></div>
+            <div class="rpt-meta-row"><span class="k">Period</span><span class="v">01 Apr — 30 Apr 2026</span></div>
+            <div class="rpt-meta-row"><span class="k">Issued</span><span class="v">01 May 2026</span></div>
+          </div>
+        </div>
+        <div class="rpt-unit">
+          <div class="rpt-unit-eb">Unit</div>
+          <div class="rpt-unit-name">Mivida-Emaar · Villa M-02</div>
+          <div class="rpt-unit-addr">3 BR · 280 m² · New Cairo · Model 02 — Operate</div>
+        </div>
+      </header>
+
+      <!-- hero payout -->
+      <section class="rpt-hero">
+        <div class="rpt-hero-l">
+          <div class="rpt-eb">Net payout to you</div>
+          <div class="rpt-hero-num">EGP <em><span data-count="145040" data-comma="1" data-dur="1800">0</span></em></div>
+          <div class="rpt-hero-sub">Disbursed 03 May 2026 · Bank transfer · CIB ••3148</div>
+        </div>
+        <div class="rpt-hero-r">
+          <div class="rpt-delta up">
+            <div class="rpt-delta-eb">vs March 2026</div>
+            <div class="rpt-delta-val"><span data-count="13.0" data-dec="1" data-prefix="+" data-suffix="%">0</span></div>
+            <div class="rpt-delta-from">from 128,300</div>
+          </div>
+          <div class="rpt-delta up">
+            <div class="rpt-delta-eb">vs April 2025</div>
+            <div class="rpt-delta-val"><span data-count="41.5" data-dec="1" data-prefix="+" data-suffix="%">0</span></div>
+            <div class="rpt-delta-from">from 102,500</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4-up stats strip -->
+      <section class="rpt-stats">
+        <div class="rpt-stat"><div class="v">80<span class="u">%</span></div><div class="k">Occupancy</div><div class="d">24 / 30 nights</div></div>
+        <div class="rpt-stat"><div class="v">8,702</div><div class="k">ADR · EGP</div><div class="d">+6.2% MoM</div></div>
+        <div class="rpt-stat"><div class="v">6,962</div><div class="k">RevPAR · EGP</div><div class="d">+11.4% MoM</div></div>
+        <div class="rpt-stat"><div class="v">4.97</div><div class="k">Guest rating</div><div class="d">4 new reviews</div></div>
+      </section>
+
+      <!-- main 2-col body -->
+      <div class="rpt-body">
+        <!-- LEFT: revenue + bookings -->
+        <div class="rpt-col-l">
+
+          <!-- Waterfall -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">A — Revenue & disbursement</div>
+              <div class="rpt-eb dim">In EGP</div>
+            </div>
+            <div class="waterfall">
+              <div class="wf-row">
+                <div class="wf-lbl">Gross revenue collected</div>
+                <div class="wf-bar"><span style="width:100%"></span></div>
+                <div class="wf-val">217,850</div>
+              </div>
+              <div class="wf-row neg">
+                <div class="wf-lbl">Channel fees <span class="wf-tag">Airbnb 14% · Booking 18%</span></div>
+                <div class="wf-bar"><span style="width:12%"></span></div>
+                <div class="wf-val">−26,150</div>
+              </div>
+              <div class="wf-row neg">
+                <div class="wf-lbl">Cleaning passthrough <span class="wf-tag">5 turnovers</span></div>
+                <div class="wf-bar"><span style="width:4.2%"></span></div>
+                <div class="wf-val">−9,000</div>
+              </div>
+              <div class="wf-row neg">
+                <div class="wf-lbl">Maintenance <span class="wf-tag">AC annual service</span></div>
+                <div class="wf-bar"><span style="width:0.7%"></span></div>
+                <div class="wf-val">−1,400</div>
+              </div>
+              <div class="wf-row neg">
+                <div class="wf-lbl">JOOD management <span class="wf-tag">20% of net</span></div>
+                <div class="wf-bar"><span style="width:16.6%"></span></div>
+                <div class="wf-val">−36,260</div>
+              </div>
+              <div class="wf-row total">
+                <div class="wf-lbl">Net payout · landlord</div>
+                <div class="wf-bar"><span style="width:66.5%"></span></div>
+                <div class="wf-val">145,040</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Channel mix -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">B — Channel mix</div>
+              <div class="rpt-eb dim">Share of gross</div>
+            </div>
+            <div class="chan-bar">
+              <div class="chan-seg airbnb" style="flex:62"><span class="chan-pct">62%</span></div>
+              <div class="chan-seg booking" style="flex:24"><span class="chan-pct">24%</span></div>
+              <div class="chan-seg direct" style="flex:14"><span class="chan-pct">14%</span></div>
+            </div>
+            <div class="chan-legend">
+              <div class="chan-item"><span class="dot airbnb"></span><span class="lbl">Airbnb</span><span class="amt">EGP 135,070</span></div>
+              <div class="chan-item"><span class="dot booking"></span><span class="lbl">Booking.com</span><span class="amt">EGP 52,280</span></div>
+              <div class="chan-item"><span class="dot direct"></span><span class="lbl">Direct · JOOD</span><span class="amt">EGP 30,500</span></div>
+            </div>
+          </section>
+
+          <!-- Bookings ledger -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">C — Booking ledger</div>
+              <div class="rpt-eb dim">5 stays · 24 nights</div>
+            </div>
+            <div class="ledger">
+              <div class="led-row led-head">
+                <div>Dates</div><div>Guest</div><div>Channel</div><div class="ar">Nights</div><div class="ar">Gross</div>
+              </div>
+              <div class="led-row">
+                <div class="dates">Apr 01 → 06</div>
+                <div class="who">M. Hashem <span class="flag">FR</span></div>
+                <div class="ch"><span class="ch-tag airbnb">Airbnb</span></div>
+                <div class="ar">5</div>
+                <div class="ar n">42,000</div>
+              </div>
+              <div class="led-row">
+                <div class="dates">Apr 08 → 13</div>
+                <div class="who">A. Renault <span class="flag">DE</span></div>
+                <div class="ch"><span class="ch-tag booking">Booking</span></div>
+                <div class="ar">5</div>
+                <div class="ar n">44,000</div>
+              </div>
+              <div class="led-row">
+                <div class="dates">Apr 14 → 21</div>
+                <div class="who">J. Hoffman <span class="flag">US</span></div>
+                <div class="ch"><span class="ch-tag airbnb">Airbnb</span></div>
+                <div class="ar">7</div>
+                <div class="ar n">64,400</div>
+              </div>
+              <div class="led-row">
+                <div class="dates">Apr 22 → 26</div>
+                <div class="who">K. Saleh <span class="flag">SA</span></div>
+                <div class="ch"><span class="ch-tag direct">Direct</span></div>
+                <div class="ar">4</div>
+                <div class="ar n">34,600</div>
+              </div>
+              <div class="led-row">
+                <div class="dates">Apr 27 → 30</div>
+                <div class="who">O. Henry <span class="flag">UK</span></div>
+                <div class="ch"><span class="ch-tag airbnb">Airbnb</span></div>
+                <div class="ar">3</div>
+                <div class="ar n">23,850</div>
+              </div>
+              <div class="led-row led-foot">
+                <div></div><div></div><div></div>
+                <div class="ar">24</div>
+                <div class="ar n">208,850</div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT: occupancy cal + log + review + outlook -->
+        <div class="rpt-col-r">
+
+          <!-- Occupancy calendar -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">D — Occupancy · April</div>
+              <div class="rpt-eb dim">80% booked</div>
+            </div>
+            <div class="cal">
+              <div class="cal-wkh"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+              <div class="cal-grid">
+                <!-- offset: April 1 2026 is Wednesday -->
+                <div class="cal-d off">29</div>
+                <div class="cal-d off">30</div>
+                <div class="cal-d off">31</div>
+                <div class="cal-d booked">1</div>
+                <div class="cal-d booked">2</div>
+                <div class="cal-d booked">3</div>
+                <div class="cal-d booked">4</div>
+
+                <div class="cal-d booked">5</div>
+                <div class="cal-d turn">6</div>
+                <div class="cal-d free">7</div>
+                <div class="cal-d booked">8</div>
+                <div class="cal-d booked">9</div>
+                <div class="cal-d booked">10</div>
+                <div class="cal-d booked">11</div>
+
+                <div class="cal-d booked">12</div>
+                <div class="cal-d turn">13</div>
+                <div class="cal-d booked">14</div>
+                <div class="cal-d booked">15</div>
+                <div class="cal-d booked">16</div>
+                <div class="cal-d booked">17</div>
+                <div class="cal-d booked">18</div>
+
+                <div class="cal-d booked">19</div>
+                <div class="cal-d booked">20</div>
+                <div class="cal-d turn">21</div>
+                <div class="cal-d booked">22</div>
+                <div class="cal-d booked">23</div>
+                <div class="cal-d booked">24</div>
+                <div class="cal-d booked">25</div>
+
+                <div class="cal-d turn">26</div>
+                <div class="cal-d booked">27</div>
+                <div class="cal-d booked">28</div>
+                <div class="cal-d booked">29</div>
+                <div class="cal-d turn">30</div>
+                <div class="cal-d off">1</div>
+                <div class="cal-d off">2</div>
+              </div>
+              <div class="cal-legend">
+                <span class="lg"><i class="sw booked"></i>Booked · 24</span>
+                <span class="lg"><i class="sw turn"></i>Turnover · 5</span>
+                <span class="lg"><i class="sw free"></i>Open · 1</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Guest review of the month -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">E — Guest review · pinned</div>
+              <div class="rpt-eb dim">★ 5.00</div>
+            </div>
+            <blockquote class="rpt-quote">"Spotless. The welcome basket from the corner bakery was a beautiful touch. Hussam answered our gate question at 11pm in three minutes. We'll be back."</blockquote>
+            <div class="rpt-quote-credit">— J. Hoffman · 7 nights · Apr 14–21</div>
+          </section>
+
+          <!-- Maintenance log -->
+          <section class="rpt-block">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">F — Maintenance log</div>
+              <div class="rpt-eb dim">2 entries</div>
+            </div>
+            <div class="log">
+              <div class="log-row">
+                <div class="log-date">Apr 07</div>
+                <div class="log-act">AC servicing · annual</div>
+                <div class="log-out">All four units cleaned & gas-checked. Scheduled.</div>
+                <div class="log-amt">−1,400</div>
+              </div>
+              <div class="log-row">
+                <div class="log-date">Apr 26</div>
+                <div class="log-act">Smart-lock recoded</div>
+                <div class="log-out">Standard post-long-stay protocol. No cost.</div>
+                <div class="log-amt">—</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Next month outlook -->
+          <section class="rpt-block outlook">
+            <div class="rpt-block-head">
+              <div class="rpt-eb">G — May 2026 outlook</div>
+              <div class="rpt-eb dim">As of 30 Apr</div>
+            </div>
+            <ul class="outlook-list">
+              <li><span class="ol-k">Forecast occupancy</span><span class="ol-v">84%</span></li>
+              <li><span class="ol-k">Forecast gross</span><span class="ol-v">EGP 232K–248K</span></li>
+              <li><span class="ol-k">Pricing strategy</span><span class="ol-v">Hold baseline · Eid surge +18%</span></li>
+              <li><span class="ol-k">Confirmed already</span><span class="ol-v">2 stays · 9 nights</span></li>
+              <li><span class="ol-k">Action this week</span><span class="ol-v">Midweek-gap targeting May 12–15</span></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer class="rpt-foot">
+        <div class="rpt-foot-l">
+          <div class="rpt-eb">Questions · Hussam Hassan</div>
+          <div class="rpt-foot-line">Hussam.hassan@Joodspaces.com · +20 102 739 9555 · Reply by 05 May</div>
+        </div>
+        <div class="rpt-foot-r">
+          <div class="rpt-eb">Page 1 of 1</div>
+          <div class="rpt-foot-line">JOOD Cairo · 01 May 2026 · Confidential to owner</div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- callout strip below -->
+    <div class="rpt-callout reveal">
+      <div class="rcb">
+        <div class="rcb-num">01</div>
+        <div class="rcb-t">Every booking. Every fee.</div>
+        <div class="rcb-d">Nothing aggregated to hide a number. You see the ledger your accountant would build.</div>
+      </div>
+      <div class="rcb">
+        <div class="rcb-num">02</div>
+        <div class="rcb-t">Disbursed by the 3rd.</div>
+        <div class="rcb-d">Payout hits your bank within 72 hours of the statement. Wire, transfer, or check — your call.</div>
+      </div>
+      <div class="rcb">
+        <div class="rcb-num">03</div>
+        <div class="rcb-t">Forward-looking.</div>
+        <div class="rcb-d">The last block is always next month — pricing strategy, expected occupancy, what we're actively chasing.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     10 — TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials" class="dense">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">09 — What landlords say</div>
+      <h2 class="title">The numbers convince.<br><em>The experience stays.</em></h2>
+    </div>
+
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="q-mark">"</div>
+        <blockquote>I handed over a unit that had sat empty eight months. Six weeks later it was booked solid and earning more than double what I'd quoted for a long-term let. The monthly report alone is worth it.</blockquote>
+        <div class="credit">
+          <div class="av">E</div>
+          <div>
+            <div class="who-name">Ellie A.</div>
+            <div class="who-unit">2BR · New Cairo · Model 01</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="q-mark">"</div>
+        <blockquote>My North Coast chalet used to earn 112K-130K in a good summer if I managed it myself — which meant constant headaches. JOOD ran the whole season. We hit 800K+. I didn't answer a single guest message.</blockquote>
+        <div class="credit">
+          <div class="av">S</div>
+          <div>
+            <div class="who-name">Sara M.</div>
+            <div class="who-unit">3BR Chalet · Marassi · Seasonal</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="q-mark">"</div>
+        <blockquote>What surprised me most was Hussam Hassan's communication. I asked something on a Friday evening and had a real answer in twenty minutes. This is a different category from any manager I've worked with.</blockquote>
+        <div class="credit">
+          <div class="av">T</div>
+          <div>
+            <div class="who-name">Tarek F.</div>
+            <div class="who-unit">Villa · Mivida · Model 02</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr-line"></div>
+
+<!-- ============================================================
+     11 — FAQ
+     ============================================================ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center; margin: 0 auto 64px;">
+      <div class="eyebrow">10 — Common questions</div>
+      <h2 class="title" style="font-size:clamp(48px,7vw,96px)">Answers before<br><em>you have to ask.</em></h2>
+    </div>
+
+    <div class="faq-shell reveal">
+      <div class="faq-item">
+        <button class="faq-q">What if a guest damages my property?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">JOOD operates a controlled booking environment — guest accountability is contractually and operationally enforced across every channel. Every reservation requires a <strong>mandatory security deposit</strong>, a <strong>pre-arrival and post-checkout inspection</strong> conducted by our team, and full <strong>photographic documentation</strong> of unit condition. If damage occurs, the incident is documented and reported within <strong>24 hours</strong>, liability is pursued directly with the guest or booking source, and our team manages the entire recovery process on your behalf. Your asset is protected through process, documentation and enforcement — not dependency on third parties. <span class="tag">Zero unresolved cases to date</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How are payments made to me?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">A fixed monthly reporting and payout cycle, no surprises. On the <strong>5th of each month</strong> you receive a comprehensive financial statement — booking performance across all channels, occupancy metrics, revenue breakdown and every operating cost. On the <strong>10th of each month</strong>, net income is transferred directly to your bank account. Audit-level clarity, by design. <span class="tag">5th — Report · 10th — Payout</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What kind of guests does JOOD attract?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">We target professionally vetted, low-risk guest segments — <strong>corporate and business travellers</strong>, multinational company bookings, short-term residential stays (relocations, temporary housing), and international visitors. Every booking is subject to <strong>identity verification</strong>, <strong>reservation-intent screening</strong>, and controlled occupancy policies. We do not accept party bookings, high-density group stays, or unverified couples reservations. The priority is asset preservation and long-term operational stability.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who is responsible in front of me as the owner?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">JOOD acts as the <strong>sole operator and accountable party</strong> for your property. We manage all booking channels, guest communication and support, pricing strategy and occupancy management, and operations, cleaning and maintenance coordination. You don't deal with guests, platforms, or day-to-day issues — your relationship is exclusively with JOOD as your operator.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do you ensure consistent occupancy and revenue?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">A <strong>multi-channel distribution strategy</strong> combining direct bookings, corporate agreements, broker networks, and international booking platforms. This reduces reliance on any single source and lets us maintain occupancy during low-demand periods, adjust pricing based on demand and guest segment, and optimise overall revenue performance. Your property is managed as an <strong>actively optimised asset</strong> — not a passive listing. <span class="tag">5+ active booking sources</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you handle maintenance costs?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Maintenance is managed through a structured approval and cost-control process. Routine operational costs — cleaning supplies, consumables, minor replacements — are covered within operations and deducted prior to revenue distribution. For any maintenance exceeding <strong>EGP 500</strong>, a detailed report (photos + quotation) is shared, and work proceeds <strong>only upon your approval</strong>. Major repairs remain the owner's responsibility, while JOOD sources qualified contractors, oversees execution, and ensures quality control and cost efficiency.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I exit if it isn't working?<span class="faq-toggle"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Agreements are designed to be clear and commercially fair. <strong>Model 01</strong> — 60-day written notice. No penalties. Existing bookings are honoured. <strong>Model 02</strong> — 4-year minimum commitment due to capital investment in furnishing and setup. <strong>Model 03</strong> — fixed 5-year lease agreement. Every exit term is explicitly stated within the contract — full clarity from the outset.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12 — CLOSER (DARK)
+     ============================================================ -->
+<section id="contact" class="ink-bg">
+  <div class="wrap closer-shell">
+    <div class="eyebrow reveal">11 — The next step</div>
+    <h2 class="reveal" style="margin-top:18px">The first conversation<br>costs <em>nothing.</em></h2>
+    <p class="reveal">We'll walk through your unit, run the assessment, and tell you honestly what JOOD can do for it — and what model makes the most sense. If it's not the right fit, we'll say so.</p>
+    <div class="closer-actions reveal">
+      <a href="mailto:Info@joodspaces.com" class="btn btn-primary">
+        Book a free assessment
+        <svg class="arrow" width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 5h16M12 1l5 4-5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="https://wa.me/201027399555" rel="noopener" class="btn btn-ghost on-dark">WhatsApp Hussam directly</a>
+    </div>
+
+    <div class="guarantee-strip reveal">
+      <div class="g"><div class="gv">Free</div><div class="gk">Property Assessment<br>No Commitment</div></div>
+      <div class="g"><div class="gv">Full</div><div class="gk">Financial<br>Transparency</div></div>
+      <div class="g"><div class="gv">Exit</div><div class="gk">Clause Written Into<br>Every Contract</div></div>
+      <div class="g"><div class="gv">24 / 7</div><div class="gk">Direct Line To<br>Hussam Hassan</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bottom">
+  <a href="#top" class="f-logo"><img src="../images/jood-logo-dark.png" alt="JOOD"></a>
+  <div>Hospitality · Real Estate · Design — Cairo, Egypt · 2026</div>
+  <div>Info@joodspaces.com</div>
+  <a href="../Coming Soon.html" class="f-back">← joodspaces.com</a>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="app.js"></script>
+<script src="fun.js"></script>
+<script src="tweaks.js"></script>
+<script src="../i18n/ar-proposal-page.js"></script>
+<script src="../i18n/jood-i18n.js"></script>
+</body>
+</html>

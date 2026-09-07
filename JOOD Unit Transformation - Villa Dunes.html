@@ -266,6 +266,7 @@ section{padding:80px 0}
 .balcony-frame{position:relative;border-radius:var(--r);overflow:hidden;margin-bottom:32px;border:1px solid var(--border)}
 .balcony-frame .balcony-slot-wrap{width:100%;aspect-ratio:16/8;position:relative}
 .balcony-frame .balcony-slot-wrap image-slot{position:absolute;inset:0;width:100%;height:100%;display:block}
+.balcony-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .5s var(--ease)}
 .balcony-overlay{
   position:absolute;inset:0;
   display:flex;flex-direction:column;justify-content:space-between;
@@ -709,12 +710,11 @@ nav.top{background:rgba(53,30,28,.9);border-bottom:1px solid var(--border)}
     <!-- cinematic photo slot -->
     <div class="balcony-frame reveal">
       <div class="balcony-slot-wrap">
-        <image-slot
-          id="balcony-hero"
-          shape="rect"
-          fit="cover"
-          placeholder="Drop the golden-hour balcony photo here"
-        ></image-slot>
+        <video class="balcony-video" id="balconyVideo"
+          src="uploads/_users_4b1b37ae-3fef-4fcc-9e58-2941c467efca_generated_ee6947ea-d93a-4676-8338-28246d723e62_generated_video-cb37c9aa.MP4"
+          muted playsinline loop preload="metadata"
+          style="opacity:0.55"
+        ></video>
       </div>
       <div class="balcony-overlay">
         <div class="balcony-eyebrow">03 — The Balcony</div>
@@ -751,19 +751,19 @@ nav.top{background:rgba(53,30,28,.9);border-bottom:1px solid var(--border)}
     <div class="invest-grid reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
       <div class="invest-summary">
         <div class="invest-row clickable" onclick="openRoomModal('r0')">
-          <span class="i-label">Living · Common Areas<span class="i-hint">View items →</span></span>
+          <span class="i-label">Reception Area<span class="i-hint">View items →</span></span>
           <span class="i-val" id="inv-r0">—</span>
         </div>
         <div class="invest-row clickable" onclick="openRoomModal('r1')">
-          <span class="i-label">Room 01 — Master Suite<span class="i-hint">View items →</span></span>
+          <span class="i-label">Bedroom 1 — Master Suite<span class="i-hint">View items →</span></span>
           <span class="i-val" id="inv-r1">—</span>
         </div>
         <div class="invest-row clickable" onclick="openRoomModal('r2')">
-          <span class="i-label">Room 02 — Guest Suite<span class="i-hint">View items →</span></span>
+          <span class="i-label">Bedroom 2 — Master Suite<span class="i-hint">View items →</span></span>
           <span class="i-val" id="inv-r2">—</span>
         </div>
         <div class="invest-row clickable" onclick="openRoomModal('r3')">
-          <span class="i-label">Room 03 — Home Office<span class="i-hint">View items →</span></span>
+          <span class="i-label">Living &amp; Home Office<span class="i-hint">View items →</span></span>
           <span class="i-val" id="inv-r3">—</span>
         </div>
         <div class="invest-row clickable" onclick="openRoomModal('r4')">
@@ -771,16 +771,16 @@ nav.top{background:rgba(53,30,28,.9);border-bottom:1px solid var(--border)}
           <span class="i-val" id="inv-r4">—</span>
         </div>
         <div class="invest-row clickable" onclick="openRoomModal('r5')">
-          <span class="i-label">Reading Corner<span class="i-hint">View items →</span></span>
+          <span class="i-label">Bedroom 3 — Children's Room<span class="i-hint">View items →</span></span>
           <span class="i-val" id="inv-r5">—</span>
         </div>
         <div class="invest-row">
           <span class="i-label">Balcony — Outdoor Living</span>
-          <span class="i-val" contenteditable="true" data-extra="balcony" title="Click to edit">28,700 EGP</span>
+          <span class="i-val" contenteditable="true" data-extra="balcony" title="Click to edit">— EGP</span>
         </div>
         <div class="invest-row">
           <span class="i-label">Bathrooms FF&amp;E (all 3)</span>
-          <span class="i-val" contenteditable="true" data-extra="bath" title="Click to edit">18,000 EGP</span>
+          <span class="i-val" contenteditable="true" data-extra="bath" title="Click to edit">— EGP</span>
         </div>
         <div class="invest-row total">
           <span class="i-label">Total floor investment</span>
@@ -897,43 +897,43 @@ nav.top{background:rgba(53,30,28,.9);border-bottom:1px solid var(--border)}
 /* ─── ROOMS DATA ──────────────────────────────────────────── */
 const ROOMS = [
   {
-    id:'r0', tabLabel:'Living · Common', name:'The Living Floor',
-    estimate: 323165,
+    id:'r0', tabLabel:'Reception Area', name:'The Reception Area',
+    estimate: 245644,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'The heart of the villa floor — anchored by a deep 3-seater sofa in natural linen, a travertine-look coffee table, and a media unit dressed with brass handles. Layered rugs define the seating zone. The kitchen bar picks up the same warm brass throughout.',
     descB:'The communal heart styled in forest tones — a deep green velvet sofa, stone-look coffee table, and abundant indoor plants that blur the boundary with the golf course outside. Brushed brass hardware on the kitchen bar. Moody and confident.'
   },
   {
-    id:'r1', tabLabel:'Room 01 — Master', name:'The Master Suite',
-    estimate: 111597,
+    id:'r1', tabLabel:'Bedroom 1 — Master', name:'The Master Suite',
+    estimate: 109425,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'A king room that reads like a premium resort suite. Platform bed in natural oak, linen headboard in off-white, bedside tables in brushed brass. The en-suite treated with textured tiles and matte black fixtures. Blackout curtains layer over sheer linen for the golf view at dawn.',
     descB:'A master suite rooted in calm forest tones — deep green bedding, a natural oak bed frame, and stone-textured accents. Pendant lights in woven seagrass. The en-suite picks up the palette with terrazzo-look flooring and a rainfall shower.'
   },
   {
-    id:'r2', tabLabel:'Room 02 — Guest', name:'The Guest Suite',
-    estimate: 69565,
+    id:'r2', tabLabel:'Bedroom 2 — Master', name:'The Second Master Suite',
+    estimate: 91720,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'A queen room with personality — slightly softer in palette than the master, with a reading nook if space allows. Textured wall treatment behind the headboard. A small desk doubles as a vanity. The en-suite gets a rainfall shower, ribbed glass partition, and terrazzo-look flooring.',
     descB:'A guest suite where biophilic design takes centre stage — sage walls, stone-look surfaces, and curated plants framing the golf view. A rattan-back chair by the window. The en-suite continues in the same stone palette.'
   },
   {
-    id:'r3', tabLabel:'Room 03 — Home Office', name:'The Home Office',
-    estimate: 75889,
+    id:'r3', tabLabel:'Living & Home Office', name:'The Living & Home Office',
+    estimate: 80848,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'The most versatile room — twin beds configurable as super-king, a proper desk for remote workers, and an en-suite that finishes identically to the others. Guests notice consistency. Strong performer for solo travellers, working professionals, and couples.',
     descB:'A focused suite where clean lines meet biophilic detail. Natural wood beds with forest-green bedding, a work desk with a golf view, and a curated plant on the windowsill. The "home office" of the floor — particularly strong for remote workers and long-stay guests.'
   },
   {
     id:'r4', tabLabel:'Entrance', name:'The Entrance',
-    estimate: 20899,
+    estimate: 11000,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'First impression, set deliberately — a console table in natural oak, a large arched mirror, and a boot bench for guests to settle in. Warm brass hooks and a woven doormat carry the desert palette straight from the door.',
     descB:'A green-toned welcome — a stone-look console, arched mirror, and a bench softened with forest-toned cushions. A single sculptural plant frames the entry, setting the biophilic tone before guests reach the living floor.'
   },
   {
-    id:'r5', tabLabel:'Reading Corner', name:'The Reading Corner',
-    estimate: 11800,
+    id:'r5', tabLabel:'Bedroom 3 — Children', name:'Bedroom 3 — Children\'s Room',
+    estimate: 40810,
     tagA:'Direction A · Desert Refined', tagB:'Direction B · Contemporary Green',
     descA:'A quiet nook carved from unused floor space — a tan leather armchair, a slim brass floor lamp, and a small side table stacked with curated coffee-table books. A rug anchors the zone without walling it off.',
     descB:'A calmer reading nook in forest tones — a bouclé armchair, a woven floor lamp shade, and a low shelf of books beside a trailing plant. Positioned to catch the golf-view light in the afternoon.'
@@ -1197,59 +1197,71 @@ function buildTicker() {
 
 /* ─── ITEMS DATA ──────────────────────────────────────────── */
 const ITEMS_DATA = {
-  r0: { label:'Living · Common Areas', items:[
-    { name:'Floor lamps × 3',             spec:'Caliber & Co · Mōōn Lamp',        price:25500 },
-    { name:'Ceiling lamps × 2',           spec:'Wadi Home · pendant',              price:18900 },
-    { name:'Coffee table',                spec:'Stone-look · Pebbles',             price:9000  },
-    { name:'TV console',                  spec:'Chichomz',                         price:13748 },
-    { name:'65" TV',                       spec:'Samsung · QLED',                   price:27490 },
-    { name:'Big carpet',                  spec:'IKEA STOCKHOLM · flatwoven',       price:24999 },
-    { name:'Medium carpet',               spec:'IKEA · handwoven',                 price:7999  },
-    { name:'Small carpet',                spec:'IKEA · low pile',                  price:9999  },
-    { name:'Big couch',                   spec:'Efreshli · Kano modular',          price:50540 },
-    { name:'Chairs (facing couch) × 2',   spec:'IKEA DYVLINGE · orange',           price:19990 },
-    { name:'Dining table',                spec:'Caliber & Co · Canisse',           price:38000 },
-    { name:'Dining chairs × 4',           spec:'Caliber & Co · Locus',             price:56800 },
-    { name:'Wall-hung shelving unit',     spec:'IKEA KALLAX-style',               price:20200 },
+  r0: { label:'Reception Area', items:[
+    { name:'Big couch (repair & maintenance)', spec:'Already provided — full refresh',      price:10000 },
+    { name:'65" TV',                           spec:'Samsung QLED · UA65U8000HUXEG',        price:25999 },
+    { name:'Dining table',                     spec:'Caliber & Co · Miel',                  price:28500 },
+    { name:'Dining chairs × 4',               spec:'Caliber & Co · Amir',                  price:24000 },
+    { name:'Console "Red"',                    spec:'Crafted Design',                        price:20000 },
+    { name:'TV unit',                          spec:'Chichomz · TV-895',                    price:13748 },
+    { name:'Reading chair',                    spec:'IKEA DYVLINGE · swivel, beige',        price:9995  },
+    { name:'LC4 Chaise Lounge',               spec:'Caliber & Co',                          price:32000 },
+    { name:'Coffee table',                     spec:'David Morgan · Kaya',                  price:16000 },
+    { name:'Library / shelving unit',          spec:'Crafted Design (2.5m × 1.5m)',         price:18000 },
+    { name:'Library chair',                    spec:'Crafted Design',                        price:12000 },
+    { name:'Side table',                       spec:'Crafted Design',                        price:4000  },
+    { name:'Ceiling lamp — living',            spec:'Wadi Home · chandelier',               price:12450 },
+    { name:'Ceiling lamp — dining',            spec:'Wadi Home · pendant',                  price:9450  },
+    { name:'Floor lamp',                       spec:'Wadi Home',                             price:3250  },
+    { name:'Big carpet / rug',                 spec:'Efreshli · Andy black-white tufted',   price:36815 },
   ]},
-  r1: { label:'Room 01 — Master Suite', items:[
-    { name:'Bed',                          spec:'Caliber & Co · Coco Bed',          price:36000 },
-    { name:'Mattress',                     spec:'Ariika · Bonne Plus',              price:17304 },
-    { name:'Reading chair',                spec:'IKEA DYVLINGE · swivel, beige',    price:9995  },
-    { name:'Commode (nightstand) × 2',     spec:'Wadi Home',                        price:23000 },
-    { name:'Floor lamp',                   spec:'IKEA LERSTA',                      price:3399  },
-    { name:'Big carpet',                   spec:'IKEA RIDSTIG · off-white/red',     price:3500  },
-    { name:'Medium carpet',                spec:'IKEA RIDSTIG · grey/off-white',    price:1900  },
-    { name:'Dresser',                      spec:'Chichomz · incl. chair',           price:16499 },
+  r1: { label:'Bedroom 1 — Master Suite', items:[
+    { name:'Dressing cabinets',               spec:'Crafted Design',                         price:32500 },
+    { name:'King bed frame (180×200)',        spec:'Crafted Design · 2 options',             price:21000 },
+    { name:'King mattress (180×200)',         spec:'Aldora · Quinn 25cm',                    price:6075  },
+    { name:'Bed commodes × 2',               spec:'Crafted Design',                          price:10000 },
+    { name:'Bench-style bed seating',        spec:'Crafted Design',                          price:7000  },
+    { name:'Dresser + chair',                spec:'Crafted Design',                          price:13000 },
+    { name:'Mirror',                         spec:'Crafted Design',                          price:3750  },
+    { name:'Floor lamp',                     spec:'Wadi Home',                               price:5750  },
+    { name:'Bedside night lamps × 2',        spec:'Wadi Home',                               price:2900  },
+    { name:'Laundry basket',                 spec:'Online',                                  price:1600  },
+    { name:'Big carpet / rug',               spec:'IKEA RIDSTIG · off-white/red',            price:3500  },
   ]},
-  r2: { label:'Room 02 — Guest Suite', items:[
-    { name:'Bed',                          spec:'Chichomz',                         price:9374  },
-    { name:'Mattress',                     spec:'Ariika · Bonne Plus',              price:17305 },
-    { name:'Commode (nightstand) × 2',     spec:'Chichomz',                         price:23136 },
-    { name:'Floor lamp',                   spec:'Wadi Home',                        price:3250  },
-    { name:'Dresser',                      spec:'Chichomz · incl. chair',           price:16500 },
+  r2: { label:'Bedroom 2 — Master Suite', items:[
+    { name:'Queen bed frame (160×200)',       spec:'Crafted Design',                         price:21000 },
+    { name:'Queen mattress (160×200)',        spec:'Aldora · Quinn 25cm',                    price:5420  },
+    { name:'Bed commodes × 2',               spec:'Crafted Design',                          price:10000 },
+    { name:'Commode / nightstand',           spec:'Chichomz · Commode-180',                 price:5000  },
+    { name:'Bench-style bed seating',        spec:'Crafted Design',                          price:7000  },
+    { name:'Reading chair',                  spec:'Crafted Design or Online',               price:12000 },
+    { name:'Dresser + chair',                spec:'Crafted Design',                          price:13000 },
+    { name:'Mirror',                         spec:'Crafted Design',                          price:3750  },
+    { name:'Ceiling lamp',                   spec:'Crafted Design',                          price:5000  },
+    { name:'Bedside night lamps × 2',        spec:'TBD',                                    price:3000  },
+    { name:'Bedside wall lamps × 2',         spec:'TBD',                                    price:1600  },
+    { name:'Laundry basket',                 spec:'TBD',                                    price:1600  },
   ]},
-  r3: { label:'Room 03 — Home Office', items:[
-    { name:'Desk',                         spec:'IKEA LAGKAPTEN',                   price:5695  },
-    { name:'Desk chair',                    spec:'Ergonomic · adjustable',           price:4000  },
-    { name:'Lounge chair (opposite desk)',  spec:'Homzmart · Mousky',                price:17444 },
-    { name:'65" TV',                        spec:'Samsung · QLED',                   price:27500 },
-    { name:'Credenza / cabinet',            spec:'IKEA JÄTTESTA',                    price:10000 },
-    { name:'Floor lamp / ceiling fixture',  spec:'Wadi Home',                        price:3250  },
-    { name:'Rug — lounge zone',            spec:'IKEA ÄRENDE · high pile',          price:8000  },
+  r3: { label:'Living & Home Office', items:[
+    { name:'Couch (repair & maintenance)',    spec:'Already provided — full refresh',        price:10000 },
+    { name:'65" TV',                          spec:'Samsung QLED · UA65U8000HUXEG',          price:25999 },
+    { name:'TV unit',                         spec:'Crafted Design',                         price:9000  },
+    { name:'Desk',                            spec:'Crafted Design · 2 options',             price:16000 },
+    { name:'Desk chair',                      spec:'Sarcomisr ergonomic · Amazon EG',        price:3949  },
+    { name:'Chair (opposite desk)',           spec:'Crafted Design',                         price:12000 },
+    { name:'Side lamp',                       spec:'Belong · Campana Chroma floor mini',    price:8900  },
   ]},
   r4: { label:'Entrance', items:[
-    { name:'Long carpet',                  spec:'IKEA RIDSTIG · flatwoven',         price:1899  },
-    { name:'Bench-style seating',          spec:'Caliber & Co · w/ shoe storage',   price:14500 },
-    { name:'Wall mirror',                  spec:'Caliber & Co',                     price:4500  },
+    { name:'Bench-style seating w/ shoe storage', spec:'Crafted Design',                    price:8000  },
+    { name:'Wall mirror',                     spec:'Caliber & Co · Mirror-902',             price:3000  },
   ]},
-  r5: { label:'Reading Corner', items:[
-    { name:'Reading armchair',             spec:'Tan leather · walnut legs',        price:4600  },
-    { name:'Floor lamp',                   spec:'Brushed brass · linen shade',      price:2200  },
-    { name:'Side table',                   spec:'Natural oak · round',              price:1600  },
-    { name:'Curated book stack',           spec:'Coffee-table set',                 price:900   },
-    { name:'Accent rug',                   spec:'Wool blend · small',               price:1800  },
-    { name:'Trailing plant + planter',     spec:'Ceramic pot',                      price:700   },
+  r5: { label:"Bedroom 3 — Children's Room", items:[
+    { name:'Bed frame — single/twin',         spec:'Crafted Design',                         price:16000 },
+    { name:'Mattress (120×200)',              spec:'Aldora · Quinn 25cm',                    price:4010  },
+    { name:'Bed commodes × 2',               spec:'Crafted Design',                          price:10000 },
+    { name:'Bean bag',                        spec:'Online',                                 price:1800  },
+    { name:'Ceiling light / fixture',         spec:'Online',                                 price:5000  },
+    { name:'Bedside night lamps × 2',        spec:'Online',                                  price:3000  },
   ]},
 };
 
@@ -1320,6 +1332,14 @@ window.addEventListener('joodlang', paintPayback);
   fmt();
   // the bilingual layer re-renders text; reformat the date on every switch
   window.addEventListener('joodlang', fmt);
+})();
+// Balcony video hover
+(function(){
+  const frame = document.querySelector('.balcony-frame');
+  const vid = document.getElementById('balconyVideo');
+  if (!frame || !vid) return;
+  frame.addEventListener('mouseenter', () => { vid.style.opacity='1'; vid.play(); });
+  frame.addEventListener('mouseleave', () => { vid.style.opacity='0.55'; vid.pause(); });
 })();
 buildTicker();
 buildRooms();
